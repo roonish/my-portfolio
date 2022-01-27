@@ -37,7 +37,7 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '1048189313';
+    var serviceWorkerVersion = '1238756249';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -99,6 +99,25 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+  </script>
+  <script>
+    document.addEventListener('wheel', function(e) {
+      e.ctrlKey && e.preventDefault();
+    }, {
+      passive: false,
+    });
+  </script>
+  <script>
+    window.addEventListener('keydown', function(e) {
+      if (event.metaKey || event.ctrlKey) {
+        switch (event.key) {
+          case '=':
+          case '-':
+            event.preventDefault();
+            break;
+        }
+      }
+    });
   </script>
 </body>
 </html>
