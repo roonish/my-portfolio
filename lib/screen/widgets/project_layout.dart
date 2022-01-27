@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/constants.dart';
 import 'package:my_portfolio/model/my_project.dart';
-import 'package:my_portfolio/responsive.dart';
 
 class ProjectLayout extends StatelessWidget {
   const ProjectLayout({
@@ -25,8 +24,10 @@ class ProjectLayout extends StatelessWidget {
             myProjects[index].title,
             maxLines: 2,
             overflow: TextOverflow.clip,
-            style: Responsive.isDesktop(context)
-                ? Theme.of(context).textTheme.subtitle2
+            style: MediaQuery.of(context).size.width > 1416
+                ?
+                //  Responsive.isDesktop(context)
+                Theme.of(context).textTheme.subtitle2
                 : Theme.of(context).textTheme.headline6,
           ),
           // const SizedBox(
@@ -37,10 +38,10 @@ class ProjectLayout extends StatelessWidget {
             myProjects[index].description,
             maxLines: 3,
             textAlign: TextAlign.start,
-            style: Responsive.isDesktop(context)
+            style: MediaQuery.of(context).size.width > 1416
                 ? const TextStyle(overflow: TextOverflow.ellipsis, height: 1.5)
                 : const TextStyle(
-                    fontSize: 18,
+                    fontSize: 15,
                     overflow: TextOverflow.ellipsis,
                     height: 1.5,
                   ),

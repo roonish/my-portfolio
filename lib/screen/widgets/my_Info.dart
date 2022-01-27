@@ -23,7 +23,9 @@ class MyInfo extends StatelessWidget {
               const CircleAvatar(
                 radius: 50,
                 backgroundImage: AssetImage(
-                  'assets/images/pp.jpeg',
+                  'assets/images/profile.jpg',
+
+                  // 'assets/images/pp.jpeg',
                 ),
               ),
               const Spacer(),

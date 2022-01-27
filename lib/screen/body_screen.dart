@@ -21,22 +21,20 @@ class BodyScreen extends StatelessWidget {
             height: defaultPadding,
           ),
           Padding(
-            padding: !Responsive.isDesktop(context)
-                ? const EdgeInsets.only(left: defaultPadding)
-                : const EdgeInsets.only(left: 0),
+            padding: const EdgeInsets.only(left: defaultPadding * 2),
             child: Text(
               "My Projects",
               style: Theme.of(context).textTheme.headline6,
             ),
           ),
-          const SizedBox(
-            height: defaultPadding,
-          ),
+          // const SizedBox(
+          //   height: defaultPadding,
+          // ),
           // const ProjectGrid(),
           const Responsive(
               mobile: ProjectGrid(
                 crossCount: 1,
-                aspectRatio: 2,
+                aspectRatio: 1.4,
               ),
               tablet: ProjectGrid(
                 crossCount: 2,

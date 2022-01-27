@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/constants.dart';
 import 'package:my_portfolio/model/my_project.dart';
 import 'package:my_portfolio/screen/widgets/project_layout.dart';
 
